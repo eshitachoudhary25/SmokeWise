@@ -13,7 +13,7 @@ def assessment():
 
 @app.route("/result", methods=["POST"])
 def result():
-    print("FILES IN TEMPLATES:", os.listdir("templates"))
+    
 
     name = request.form["name"]
     age = int(request.form.get("age", 0))
