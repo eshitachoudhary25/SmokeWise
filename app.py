@@ -57,15 +57,17 @@ def result():
     print(recommendation)
     print("Debug:",recommendation)
     return render_template(
-        "result.html",
-        name=name,
-        age=age,
-        bmi=round(bmi, 2),
-        risk_score=risk_score,
-        risk_level=risk_level,
-        recommendation=recommendation,
-        health_score=health_score 
-    )
+    "result.html",
+    name=name,
+    age=age,
+    cigarettes=cigarettes,
+    years=years,
+    bmi=bmi,
+    risk_level=risk_level,
+    risk_score=risk_score,
+    recommendation=recommendation,
+    health_score=health_score
+)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
